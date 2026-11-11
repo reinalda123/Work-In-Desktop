@@ -1,0 +1,21 @@
+{
+  "name": "work-in-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Work-in desktop app (Tauri v2 Windows installer wrapper for Work-in)",
+  "author": "reinalda123",
+  "scripts": {
+    "prepare:renderer": "node scripts/prepare-renderer.mjs",
+    "prepare:renderer:remote": "node scripts/prepare-renderer.mjs --remote",
+    "tauri": "tauri",
+    "dev": "node scripts/prepare-renderer.mjs && tauri dev",
+    "build": "node scripts/prepare-renderer.mjs && tauri build --bundles nsis",
+    "build:remote": "node scripts/prepare-renderer.mjs --remote && tauri build --bundles nsis"
+  },
+  "dependencies": {
+    "@tauri-apps/plugin-opener": "^2.7.3"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.4"
+  }
+}

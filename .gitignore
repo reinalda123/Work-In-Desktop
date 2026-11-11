@@ -1,0 +1,6 @@
+node_modules/
+app-dist/
+.web-cache/
+src-tauri/target/
+*.log
+npm-debug.log*
